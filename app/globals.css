@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2933;
+  --brand-red: #d00000;
+  --brand-red-dark: #a80000;
+  --brand-red-soft: #fff1f1;
+  --brand-black: #111111;
+  --brand-graphite: #1f2933;
+  --brand-muted: #6b7280;
+  --brand-line: #e5e7eb;
+  --brand-canvas: #f8fafc;
+  --radius-brand: 1.25rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-dark: var(--brand-red-dark);
+  --color-brand-red-soft: var(--brand-red-soft);
+  --color-brand-black: var(--brand-black);
+  --color-brand-graphite: var(--brand-graphite);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-line: var(--brand-line);
+  --color-brand-canvas: var(--brand-canvas);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--brand-red);
+  color: white;
+}
+
+.campaign-marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.campaign-marquee-track {
+  animation: campaign-marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.campaign-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes campaign-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .campaign-marquee-track {
+    animation: none;
+  }
+}
