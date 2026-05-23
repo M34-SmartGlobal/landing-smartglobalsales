@@ -19,6 +19,7 @@ export function SettingsManager({ initialValue, initialServicesText }: SettingsM
     phone: initialValue.phone ?? "",
     email: initialValue.email ?? "",
     facebook: initialValue.facebook ?? "",
+    instagram: initialValue.instagram ?? "",
     linkedin: initialValue.linkedin ?? "",
     tiktok: initialValue.tiktok ?? "",
   });
@@ -57,6 +58,7 @@ export function SettingsManager({ initialValue, initialServicesText }: SettingsM
         <Input label="Teléfono de contacto" value={form.phone} onChange={(event) => updateField("phone", event.target.value)} />
         <Input label="Correo principal" type="email" value={form.email} onChange={(event) => updateField("email", event.target.value)} />
         <Input label="Facebook URL" value={form.facebook} onChange={(event) => updateField("facebook", event.target.value)} />
+        <Input label="Instagram URL" value={form.instagram} onChange={(event) => updateField("instagram", event.target.value)} />
         <Input label="LinkedIn URL" value={form.linkedin} onChange={(event) => updateField("linkedin", event.target.value)} />
         <Input label="TikTok URL" value={form.tiktok} onChange={(event) => updateField("tiktok", event.target.value)} />
       </div>

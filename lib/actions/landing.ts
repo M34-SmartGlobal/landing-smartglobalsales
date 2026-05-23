@@ -52,6 +52,7 @@ export type PublicContactInfo = {
   phone: string;
   email: string;
   facebook: string;
+  instagram: string;
   linkedin: string;
   tiktok: string;
 };
@@ -201,6 +202,7 @@ export async function getPublicContactInfo(): Promise<PublicContactInfo> {
     phone: "+51 000 000 000",
     email: "contacto@smartglobalsales.com",
     facebook: "#",
+    instagram: "#",
     linkedin: "#",
     tiktok: "#",
   };
@@ -221,6 +223,7 @@ export async function getPublicContactInfo(): Promise<PublicContactInfo> {
     phone: value.phone || fallback.phone,
     email: value.email || fallback.email,
     facebook: value.facebook || fallback.facebook,
+    instagram: value.instagram || fallback.instagram,
     linkedin: value.linkedin || fallback.linkedin,
     tiktok: value.tiktok || fallback.tiktok,
   };

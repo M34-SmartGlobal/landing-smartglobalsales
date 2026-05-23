@@ -15,14 +15,14 @@ export function FooterLegal({ legalTexts }: FooterLegalProps) {
   return (
     <>
       <footer className="border-t border-brand-line bg-white px-6 py-10">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_2fr]">
-          <div>
+        <div className="mx-auto grid max-w-7xl gap-8 text-center lg:grid-cols-[1fr_2fr] lg:text-left">
+          <div className="mx-auto max-w-sm lg:mx-0">
             <p className="text-2xl font-black tracking-tight text-brand-black">Smart Global Sales</p>
             <p className="mt-3 max-w-sm text-sm leading-6 text-brand-muted">
               Captación de talento y gestión comercial con procesos claros, rápidos y seguros.
             </p>
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 lg:justify-end">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:flex-wrap lg:justify-end">
             {legalTexts.map((text) => (
               <button
                 key={text.id}

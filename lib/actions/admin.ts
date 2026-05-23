@@ -194,6 +194,7 @@ export async function getPublicContactSetting(): Promise<SiteSettingRow> {
       phone: data?.value?.phone ?? "+51 000 000 000",
       email: data?.value?.email ?? "contacto@smartglobalsales.com",
       facebook: data?.value?.facebook ?? "#",
+      instagram: data?.value?.instagram ?? "#",
       linkedin: data?.value?.linkedin ?? "#",
       tiktok: data?.value?.tiktok ?? "#",
     },
