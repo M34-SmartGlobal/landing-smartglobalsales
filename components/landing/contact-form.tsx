@@ -97,7 +97,7 @@ export function ContactForm() {
             {...register("phone")}
           />
           <Select
-            label="¿Cómo ha llegado a saber de Midas/Smart?"
+            label="¿Cómo ha llegado a saber de Smart Global Sales?"
             options={discoverySources}
             error={errors.discoverySource?.message}
             {...register("discoverySource")}
